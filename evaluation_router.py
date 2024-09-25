@@ -22,15 +22,15 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="the training code for router")
     parser.add_argument('--test_data_paths',nargs='+', default=["./datasets/split2_model7/arc_challenge_test.json", "./datasets/split2_model7/MATH_prealgebra.json", "./datasets/split2_model7/mbpp.json", "./datasets/split2_model7/ceval.json" ,"./datasets/split2_model7/gsm8k-test.json", "./datasets/split2_model7/humaneval_test.json",  "./datasets/split2_model7/mmlu_test.json", "./datasets/split2_model7/cmmlu_test.json"])
     parser.add_argument('--test_data_type', nargs='+', default=["probability", "probability", "multi_attempt","probability", "multi_attempt", "multi_attempt", "probability",  "probability"])
-    parser.add_argument('--trained_router_path', default="/data/home/chensh/projects/LLM_router/logs/paper_result/ablation_zero_score/H_3_slw_0_clw_1_clw_2_0_cos_tk_3_lk_3_lr_5e-5_step_1000_t_1_seed_5/best_training_model.pth")
+    parser.add_argument('--trained_router_path', default="./logs/paper_result/ablation_zero_score/H_3_slw_0_clw_1_clw_2_0_cos_tk_3_lk_3_lr_5e-5_step_1000_t_1_seed_5/best_training_model.pth")
     args = parser.parse_args()
 
     torch.manual_seed(42)
     random.seed(42)
 
     # get router model (flan-t5-encoder)
-    tokenizer = AutoTokenizer.from_pretrained("/data/home/chensh/data/huggingface_model/microsoft/mdeberta-v3-base", truncation_side='left', padding=True)
-    encoder_model = DebertaV2Model.from_pretrained("/data/home/chensh/data/huggingface_model/microsoft/mdeberta-v3-base")
+    tokenizer = AutoTokenizer.from_pretrained("microsoft/mdeberta-v3-base", truncation_side='left', padding=True)
+    encoder_model = DebertaV2Model.from_pretrained("microsoft/mdeberta-v3-base")
     
     router_model = RouterModule(encoder_model, hidden_state_dim=768, node_size=7, similarity_function="cos").to(device)
 
