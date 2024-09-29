@@ -20,4 +20,14 @@ Refer to the [train_scripts](train_scripts) folder for detailed training instruc
 During training, the model automatically evaluates at predefined evaluation steps. 
 You can also manually evaluate a specific checkpoint using [evaluation_router.py](evaluation_router.py).
 
+## Citation
+If you find RouterDC is useful for your research and applications, please cite using this BibTeX:
 
+```
+@inproceedings{chen2024RouterDC,
+  title={RouterDC: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models},
+  author={Shuhao Chen, Weisen Jiang, Baijiong Lin, James T. Kwok, and Yu Zhang},
+  booktitle={Neural Information Processing Systems},
+  year={2023}
+}
+```
