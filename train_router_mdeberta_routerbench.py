@@ -9,10 +9,9 @@ import random
 
 import torch.nn as nn
 import torch.optim
-from torch.nn import Linear
 from torch.utils.data import Dataset, DataLoader, ConcatDataset
 from tqdm import tqdm
-from transformers import T5EncoderModel, T5Tokenizer, AutoTokenizer, DebertaV2Model
+from transformers import AutoTokenizer, DebertaV2Model
 from utils.meters import AverageMeter
 import numpy as np
 
@@ -328,7 +327,6 @@ if __name__ == '__main__':
 
             pbar.set_postfix({"step": f"{step}","loss": loss.item()})
             pbar.write(f"step:{step}, loss:{loss.item()}")
-            # print(f"step:{step}, loss:{loss.item()}")
             pbar.update(1)
             step += 1
             if step >= args.training_steps:
