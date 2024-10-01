@@ -25,9 +25,9 @@ If you find RouterDC is useful for your research and applications, please cite u
 
 ```
 @inproceedings{chen2024RouterDC,
-  title={RouterDC: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models},
+  title={{RouterDC}: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models},
   author={Shuhao Chen, Weisen Jiang, Baijiong Lin, James T. Kwok, and Yu Zhang},
   booktitle={Neural Information Processing Systems},
-  year={2023}
+  year={2024}
 }
 ```
