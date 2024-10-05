@@ -1,5 +1,8 @@
-# RouterDC: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models
+# (NeurIPS 2024) RouterDC: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models
 
+---
+
+Official Implementation of NeurIPS 2024 paper "[RouterDC: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models](https://arxiv.org/abs/2409.19886)".
 
 # Quick Start
 
