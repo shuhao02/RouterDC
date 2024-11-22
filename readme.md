@@ -13,8 +13,8 @@ We have provided the necessary training datasets in the [datasets](./datasets) f
 
 To create your own training datasets from scratch, follow these steps:
 
-- **Evaluate LLM Outputs:** Use EleutherAI's [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) and [bigcode-evaluation-harness
-](https://github.com/bigcode-project/bigcode-evaluation-harness?tab=readme-ov-file#features) to evaluate each language model (LLM). This work use  and  for evaluating language model. So, the first thing to do is to configure the environment of these two libraries. First, set up the environment for these libraries. You can find the commands to generate the answers for each dataset subset in the [eval_scripts](./eval_scripts) folder.
+- **Evaluate LLM Outputs:** Use [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) and [bigcode-evaluation-harness
+](https://github.com/bigcode-project/bigcode-evaluation-harness?tab=readme-ov-file#features) to evaluate each language model (LLM). The commands to generate the answers for each dataset subset can be found in the [eval_scripts](./eval_scripts) folder.
 - **Prepare the Dataset:** Allocate the scores for each LLM, then merge the scores with the queries to create the training and testing datasets. Detailed instructions can be found in [convert_dataset_7_model.ipynb](convert_dataset_7_model.ipynb).
 - **Assign Cluster IDs:** Allocate cluster IDs for the training dataset by following the process outlined in [cluster_generate.ipynb](src/cluster_generate.ipynb).
 
