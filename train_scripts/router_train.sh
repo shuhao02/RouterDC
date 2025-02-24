@@ -1,4 +1,4 @@
-export CUDA_VISIBLE_DEVICES="0"
+export CUDA_VISIBLE_DEVICES="6"
 
 top_k=3
 last_k=3
@@ -8,7 +8,7 @@ tempreture=1
 similarity_function="cos"
 sample_loss_weight=0
 cluster_loss_weight=1
-seeds=(5)
+seeds=(1)
 
 for seed in "${seeds[@]}"; do
     python -u train_router_mdeberta.py --training_steps ${training_steps} --top_k ${top_k} --last_k ${last_k} --learning_rate ${learning_rate} --eval_steps 50 --tempreture ${tempreture} --similarity_function ${similarity_function} --sample_loss_weight ${sample_loss_weight} --cluster_loss_weight ${cluster_loss_weight} --final_eval --seed ${seed} --batch_size 16 \
