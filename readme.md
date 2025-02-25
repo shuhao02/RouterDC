@@ -5,7 +5,11 @@ Shuhao Chen, Weisen Jiang, Baijiong Lin, James T. Kwok, and Yu Zhang
 ---
 Official Implementation of NeurIPS 2024 paper "[RouterDC: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models](https://arxiv.org/abs/2409.19886)".
 
-![image](figs/framework.png)
+[//]: # (![image]&#40;figs/framework.png&#41;)
+
+<p align="center">
+<img src="figs/framework.png" width="400px">
+</p>
 
 # Abstract
 Recent works show that assembling multiple off-the-shelf large language models
@@ -20,7 +24,9 @@ show that RouterDC is effective in assembling LLMs and largely outperforms
 individual top-performing LLMs as well as existing routing methods on both
 in-distribution (+2.76%) and out-of-distribution (+1.90%) tasks. 
 
-![image](figs/llm-routing-radar.png)
+<p align="center">
+<img src="figs/llm-routing-radar.png" width="450px">
+</p>
 
 # Quick Start
 ## Datasets
